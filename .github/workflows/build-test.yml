@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  echo-test:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,18 @@ jobs:
       - name: build
         run: npm run build
 
-      - name: Echo the name
-        run: |
-          export NAME=Mathias
-          echo the $NAME !
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build-test
+
+    steps: 
+      - uses: actions/checkout@v3
+
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "joke-app-5iw1"
+          heroku_email: waruny@hotmail.fr
+
+  
