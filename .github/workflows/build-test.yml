@@ -35,5 +35,3 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "joke-app-5iw1"
           heroku_email: waruny@hotmail.fr
-
-  
