@@ -1,0 +1,8 @@
+name: 
+
+on:
+  push:
+    paths:
+      - "**"
+
+jobs:

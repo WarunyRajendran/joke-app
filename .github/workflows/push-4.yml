@@ -1,0 +1,8 @@
+name: Start by feat
+
+on:
+  push:
+    branches:
+      - "feat*"
+
+jobs:

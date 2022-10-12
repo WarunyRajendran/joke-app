@@ -1,0 +1,8 @@
+name: specific folder
+
+on:
+  push:
+    paths:
+      - "folder/*"
+
+jobs:

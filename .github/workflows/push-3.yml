@@ -1,0 +1,8 @@
+name: Except staging branches
+
+on:
+  push:
+    branches-ignore:
+      - "staging*"
+
+jobs:
